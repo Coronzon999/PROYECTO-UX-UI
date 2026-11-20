@@ -1,0 +1,204 @@
+:root{
+    --colorPrimario: #82C8E5;
+    --colorFooter: #E3F2FA;
+    --colorSeparacion: #CBD5E1;
+    --colorTitulo: #000;
+    --colorParrafo: #1E293B;
+    --colorSombrado: #E3F2FA;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 4px var(--colorSeparacion);
+}
+
+.menu{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.menu__img-logo{
+    height: 85px;
+
+}
+
+.menu__btn-menu{
+    display: none;
+}
+
+.menu__enlaces a{
+    font-family: 'Poppins';
+    padding: 2em;
+    text-align: center;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: var(--colorTitulo);
+    font-weight: 500;
+    transition: color 1s ease;
+}
+
+.menu__enlaces_caja a{
+    font-family: 'Poppins';
+    padding: 1.2em;
+    background-color: #CBD5E1;
+    text-align: center;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: var(--colorTitulo);
+    font-weight: 500;
+    transition: color 1s ease;
+    border-radius: 1em;
+    
+}
+
+.menu__enlaces a:hover{
+    color: #82C8E5;
+}
+.menu__enlaces_caja a:hover{
+    color: #82C8E5;
+}
+
+
+@media screen and (max-width: 1023px){
+    .menu{
+        flex-direction: column;
+    }
+    .menu__logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1em;
+    }
+    .menu__btn-menu{
+        display: block;
+        color: var();
+        font-size: 1.5em;
+    }  
+
+    .menu__enlaces{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* INICIO DE BANNER */
+
+.mainbanner{
+    position: relative;
+    padding: 18em 14em;
+    top: 61px;
+}
+
+.mainbanner::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--colorSecundario);
+    mix-blend-mode:color;
+    opacity: .2;
+}
+
+.mainbanner__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 89%;
+    object-fit: cover;
+}
+
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+    z-index: 20;
+    position: relative;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.centrado{
+    display: block;
+    margin: auto;
+}
+
+.mainbanner__data{
+    margin-left: -15em;
+    margin-top: -5em;
+   
+}
+
+.mainbanner__titulo{
+    color: var(--colorPrimario);
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 4em;
+}
+
+.mainbanner__parrafo{
+    color: var(--colorParrafo);
+    font-family: 'Poppins';
+    font-size: 2em;   
+}
+
+.mainbanner__boton{
+    background-color: var(--colorPrimario);
+    color: #fff;
+    padding: 1em 3em;
+    border-radius: 2em;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Poppins';
+}
+
+
+
+@media screen and (max-width: 860px){
+    .mainbanner{
+        padding: 6em 4em;
+    }
+    .mainbanner__boton{
+        display: block;
+        margin-bottom: 1em;
+    }
+    
+    .mainbanner__data{
+        text-align: center;
+        margin: auto;
+    }
+
+    .mainbanner__titulo{
+        font-size: 2em;
+
+    }
+    .mainbanner__parrafo{
+        font-size: 1em;
+    }
+
+}
+
+/* FIN DE BANNER */
