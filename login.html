@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroShop - Iniciar Sesión</title>
+
+    <!-- FAVICON Y/O LOGOTIPO DE PAGINA -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- LIBRERIA DE FUENTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- FRAMEWORK DE BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- LIBRERIA DE ICONOS -->
+    <script src="https://kit.fontawesome.com/812c8ee19a.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="barra-navegacion">
+        <div class="caja-logo">
+            <!-- Coloca aquí la ruta de tu logo: ej. img/logo.png -->
+            <img src="" alt="Logo ElectroShop" class="imagen-logo">
+        </div>
+
+        <nav class="enlaces-navegacion">
+            <a href="inicio.html">INICIO</a>
+            <a href="#">PRODUCTO</a>
+            <a href="#">OFERTAS</a>
+            <a href="nosotros.html">NOSOTROS</a>
+            <a href="#">CONTACTO</a>
+        </nav>
+
+        <a href="login.html" class="boton-login">LOGIN</a>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL DE LOGIN -->
+    <main class="seccion-login">
+        <!-- Columna Izquierda: Imagen y Bienvenida -->
+        <div class="columna-bienvenida">
+            <img src="img/images (9).jpg" alt="Electrodomésticos ElectroShop" class="imagen-bienvenida">
+            <h1>BIENVENIDOS A ELECTROSHOP</h1>
+            <p>
+                Inicia sesión para acceder a tu cuenta y disfrutar de una mejor experiencia de compra
+            </p>
+        </div>
+
+        <!-- Línea divisoria vertical -->
+        <div class="divisor-vertical"></div>
+
+        <!-- Columna Derecha: Tarjeta Amarilla de Formulario -->
+        <div class="columna-formulario">
+            <div class="tarjeta-login">
+                <h2>INICIA SESIÓN</h2>
+
+                <form class="formulario-login">
+                    <div class="grupo-campo">
+                        <label for="correo">CORREO ELECTRONICO</label>
+                        <input type="email" id="correo" placeholder="ingrese su correo electronico" required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="contrasena">CONTRASEÑA</label>
+                        <div class="contenedor-contrasena">
+                            <input type="password" id="contrasena" placeholder="ingrese su contraseña" required>
+                            <button type="button" class="boton-ojito" id="alternar-contrasena" aria-label="Mostrar u ocultar contraseña" title="Mostrar u ocultar contraseña">
+                                <i class="fa-solid fa-eye" id="icono-ojo"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="opciones-login">
+                        <label class="recordar-cuenta">
+                            <input type="checkbox">
+                            <span>Recuperar mi cuenta</span>
+                        </label>
+                        <a href="#" class="enlace-olvide">¿Olvidaste la contraseña?</a>
+                    </div>
+
+                    <div class="contenedor-boton">
+                        <button type="submit" class="boton-celeste">INGRESAR</button>
+                    </div>
+                </form>
+
+                <div class="separador-o">
+                    <span class="linea"></span>
+                    <span class="texto-o">o</span>
+                    <span class="linea"></span>
+                </div>
+
+                <div class="contenedor-boton">
+                    <a href="#" class="boton-celeste boton-crear">CREA UNA CUENTA</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- SCRIPT PARA MOSTRAR / OCULTAR CONTRASEÑA -->
+    <script>
+        const inputContrasena = document.getElementById('contrasena');
+        const botonOjito = document.getElementById('alternar-contrasena');
+        const iconoOjo = document.getElementById('icono-ojo');
+
+        botonOjito.addEventListener('click', () => {
+            const esPassword = inputContrasena.type === 'password';
+            inputContrasena.type = esPassword ? 'text' : 'password';
+
+            iconoOjo.classList.toggle('fa-eye', !esPassword);
+            iconoOjo.classList.toggle('fa-eye-slash', esPassword);
+        });
+    </script>
+
+</body>
+</html>

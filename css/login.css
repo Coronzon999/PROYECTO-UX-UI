@@ -1,0 +1,344 @@
+/* VARIABLES DE COLOR */
+:root {
+    --colorPrimario: #75B8D9;
+    --colorSecundario: #000000;
+    --colorTerciario: #EF4444;
+    --colorTitulos: #75B8D9;
+    --colorParrafos: #000000;
+    --colorSombras: #282D31;
+    --colorBordes: #DFE0E0;
+    --colorFondoGris: #D9D9D9;
+    --colorTarjetaAmarilla: #FFCC00;
+}
+
+/* RESET Y FUENTE POPPINS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--colorParrafos);
+}
+
+/* BARRA DE NAVEGACIÓN */
+.barra-navegacion {
+    background-color: var(--colorFondoGris);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 48px;
+}
+
+.caja-logo {
+    background-color: #ffffff;
+    width: 155px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.imagen-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.enlaces-navegacion {
+    display: flex;
+    gap: 40px;
+}
+
+.enlaces-navegacion a {
+    text-decoration: none;
+    color: var(--colorSecundario);
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.enlaces-navegacion a:hover {
+    color: var(--colorPrimario);
+}
+
+.boton-login {
+    background-color: var(--colorTerciario);
+    color: var(--colorSecundario);
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: opacity 0.3s;
+}
+
+.boton-login:hover {
+    opacity: 0.9;
+}
+
+/* SECCIÓN PRINCIPAL DE LOGIN (MÁS GRANDE Y CON MENOS ESPACIO VACÍO) */
+.seccion-login {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 35px 50px;
+    gap: 50px;
+    min-height: calc(100vh - 98px);
+}
+
+/* COLUMNA IZQUIERDA (BIENVENIDA) */
+.columna-bienvenida {
+    flex: 1;
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.imagen-bienvenida {
+    width: 100%;
+    max-width: 540px;
+    height: 410px;
+    object-fit: cover;
+    background-color: var(--colorBordes);
+    margin-bottom: 24px;
+}
+
+.columna-bienvenida h1 {
+    color: var(--colorTitulos);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.columna-bienvenida p {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--colorParrafos);
+    max-width: 500px;
+    text-align: left;
+}
+
+/* LÍNEA DIVISORIA VERTICAL */
+.divisor-vertical {
+    width: 1px;
+    height: 600px;
+    background-color: var(--colorSecundario);
+    opacity: 0.5;
+}
+
+/* COLUMNA DERECHA (TARJETA AMARILLA MÁS AMPLIA) */
+.columna-formulario {
+    flex: 1;
+    max-width: 580px;
+    display: flex;
+    justify-content: center;
+}
+
+.tarjeta-login {
+    background-color: var(--colorTarjetaAmarilla);
+    width: 100%;
+    padding: 50px 48px;
+    border-radius: 4px;
+}
+
+.tarjeta-login h2 {
+    color: var(--colorTitulos);
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+.grupo-campo {
+    margin-bottom: 24px;
+}
+
+.grupo-campo label {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--colorSecundario);
+    margin-bottom: 8px;
+}
+
+.grupo-campo input {
+    width: 100%;
+    padding: 15px 18px;
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+    font-size: 15.5px;
+    color: var(--colorParrafos);
+}
+
+.grupo-campo input::placeholder {
+    color: #777777;
+}
+
+/* OPCIONES DEBAJO DE CONTRASEÑA */
+.opciones-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 36px;
+    gap: 12px;
+}
+
+.recordar-cuenta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: var(--colorSecundario);
+}
+
+.recordar-cuenta input[type="checkbox"] {
+    width: 19px;
+    height: 19px;
+    accent-color: var(--colorPrimario);
+    cursor: pointer;
+}
+
+.enlace-olvide {
+    text-decoration: none;
+    color: var(--colorSecundario);
+}
+
+.enlace-olvide:hover {
+    text-decoration: underline;
+}
+
+/* BOTONES CELESTES */
+.contenedor-boton {
+    display: flex;
+    justify-content: center;
+}
+
+.boton-celeste {
+    background-color: var(--colorPrimario);
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+    padding: 12px 54px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    display: inline-block;
+    text-align: center;
+}
+
+.boton-celeste:hover {
+    opacity: 0.88;
+}
+
+.boton-crear {
+    padding: 12px 46px;
+}
+
+/* SEPARADOR CON LA LETRA "o" */
+.separador-o {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 26px 0;
+}
+
+.separador-o .linea {
+    flex: 1;
+    height: 1px;
+    background-color: var(--colorSecundario);
+}
+
+.separador-o .texto-o {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--colorSecundario);
+}
+
+/* DISEÑO RESPONSIVO */
+@media (max-width: 950px) {
+    .barra-navegacion {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .enlaces-navegacion {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .seccion-login {
+        flex-direction: column;
+        padding: 35px 25px;
+        gap: 35px;
+    }
+
+    .divisor-vertical {
+        display: none;
+    }
+
+    .imagen-bienvenida {
+        height: 300px;
+    }
+
+    .columna-bienvenida p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .tarjeta-login {
+        padding: 30px 22px;
+    }
+
+    .opciones-login {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+/* CONTENEDOR DE CONTRASEÑA CON BOTÓN DE OJITO */
+.contenedor-contrasena {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-contrasena input {
+    padding-right: 48px;
+}
+
+.boton-ojito {
+    position: absolute;
+    right: 14px;
+    background: transparent;
+    border: none;
+    color: var(--colorSecundario);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    transition: color 0.2s;
+}
+
+.boton-ojito:hover {
+    color: var(--colorPrimario);
+}
