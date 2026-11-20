@@ -1,0 +1,201 @@
+
+/* VARIABLES CSS */
+/* El root es el selector padre */
+:root{
+    --colorPrimario: #82C8E5;
+    --colorFooter: #E3F2FA;
+    --colorSeparacion: #CBD5E1;
+    --colorTitulo: #000;
+    --colorParrafo: #1E293B;
+    --colorSombrado: #E3F2FA;
+}
+/* SELECTOR UNIVERSAL  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+body{
+    background-color: #fff;
+}
+
+.rectangulo{
+    width: auto;
+    background-color: var(--colorPrimario)
+}
+
+.Titulo{
+    font-family: "poppins";
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+    font-size: 5em;
+}
+
+.Subtitulo{
+    font-family: "poppins";
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    font-size: 3.5em;
+}
+
+.Subtitulo__2{
+    font-family: "poppins";
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    font-size: 3.5em;
+}
+
+.cards__grid{
+    display: grid; 
+    gap: 3em;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card{
+    background-color: #FFFF;
+    border-radius: 1em;
+    border: .5px solid var(--colorBordes);
+    box-shadow: 0 2px 2px var(--colorSombras);
+    overflow: hidden;
+}
+
+.card--tall {
+    align-self: start;
+}
+
+.card__img {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.card--tall .card__img {
+    aspect-ratio: 5 / 6;
+}
+
+.card__img a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.card__img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 600px) {
+    .cards__grid {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+    }
+}
+
+.cards__grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5em;
+}
+
+.card2 {
+    padding: 0.6em;
+    background-color: #dedede;
+    border-radius: 1.5em;
+    overflow: hidden;
+}
+
+.card__img2 {
+    aspect-ratio: 16 / 9;
+    border-radius: 1.1em;
+    overflow: hidden;
+}
+
+.card__img2 a,
+.card__img2 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.card__img2 img {
+    object-fit: cover;
+}
+
+@media (max-width: 600px) {
+    .cards__grid2 {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+    }
+}
+
+
+.mainbanner{
+    position: relative;
+} 
+.mainbanner::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+}
+.mainbanner__img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+    z-index: 20; 
+    position: relative;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.centrado{
+    display: block;
+    margin: auto;
+}
+
+
+@media screen and (max-width: 860px) {
+    .mainbanner {
+        padding: 8em 6em;
+    }
+
+}
+@media screen and (max-width: 360px) {
+    .mainbanner {
+        padding: 4em 2em;
+    }
+
+}
+
+
+#carouselExampleCaptions {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#carouselExampleCaptions .carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 768px) {
+    #carouselExampleCaptions .carousel-item img {
+        height: 220px;
+    }
+}
