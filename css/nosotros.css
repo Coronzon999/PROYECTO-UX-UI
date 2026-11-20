@@ -1,0 +1,18 @@
+:root {
+    --colorPrimario: #EC111A;
+    --colorSecundario: #082BA5;
+    --colorTerciario: #007BDF;
+    --colorTitulos: #282D31;
+    --colorParrafos: #53575A;
+    --colorSombras: #282D31;
+    --colorBordes: #DFE0E0;
+}
+
+/* =========================================
+   ESTILOS GENERALES
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
