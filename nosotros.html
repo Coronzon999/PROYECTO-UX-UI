@@ -19,38 +19,34 @@
 
     <link rel="stylesheet" href="css/nosotros.css">
 
+    <script src="js/WE_MC_03_jquery.js"></script>
+
 </head>
 <body>
-<!-- ENCABEZADO / BARRA DE NAVEGACIÓN -->
-    <header class="barra-navegacion">
-        <div class="caja-logo">
-            <!-- Coloca aquí la ruta de tu logo -->
-            <img src="img" alt="Logo ElectroShop" class="imagen-logo">
-        </div>
-
-        <nav class="enlaces-navegacion">
-            <a href="inicio.html">INICIO</a>
-            <a href="#">PRODUCTO</a>
-            <a href="#">OFERTAS</a>
-            <a href="nosotros.html" class="activo">NOSOTROS</a>
-            <a href="#">CONTACTO</a>
-        </nav>
-
-        <a href="login.html" class="boton-login">LOGIN</a>
-    </header>
-    <section class="portada">
-        <div class="capa-portada">
-            <div class="contenido-portada">
-                <h1>NOSOTROS</h1>
-                <p>
-                    En ElectroShop, creemos que la tecnología hace tu vida más fácil. 
-                    Por eso, trabajamos para ofrecerte los mejores electrodomésticos con 
-                    calidad, innovación y el mejor servicio.
-                </p>
-                <a href="#quienes-somos" class="boton-celeste">conoce más</a>
+<!-- MENÚ DE NAVEGACIÓN -->
+        <header id="header">
+        <nav class="menu">
+            <div class="menu__logo">
+            <a href="index.html">
+                <img src="img/logo.jpg" alt="" class="img-fluid menu__img-logo" />
+            </a>
+            <a href="#" class="menu__btn-menu" id="btn-menu">
+                <i class="fa-solid fa-bars menu__icono-menu"></i>
+            </a>
             </div>
-        </div>
-    </section>
+            <div class="menu__enlaces" id="enlaces">
+            <a href="index.html">INICIO</a>
+            <a href="producto.html">PRODUCTO</a>
+            <a href="ofertas.html">OFERTAS</a>
+            <a href="nosotros.html">NOSOTROS</a>
+            <a href="contactos.html">CONTACTO</a>
+            </div>
+            <div class="menu__enlaces_caja" id="enlaces">
+                <a href="login.html">LOGIN</a>
+            </div>
+        </nav>
+        </header>
+    <!-- FIN DE MENÚ -->
 
     <!-- SECCIÓN QUIÉNES SOMOS Y NUESTROS VALORES -->
     <section id="quienes-somos" class="seccion-nosotros-valores">
@@ -106,63 +102,69 @@
         </div>
     </section>
 
-    <!-- PIE DE PÁGINA -->
-    <footer class="pie-pagina">
-        <div class="pie-superior">
-            <!-- Columna Marca -->
-            <div class="columna-pie columna-marca">
-                <h3 class="logo-pie">Electro<span>Shop</span></h3>
-                <p>
-                    Tecnología de vanguardia para equipar tu casa con garantía oficial y envíos seguros.
+        <!-- INICIO DE FOOTER -->
+
+    <footer>
+    <section class="container">
+        <section class="row">
+            <!-- Columna 1: Logo y Descripción -->
+            <div class="col-10 col-sm-3 col-md-3 col-lg-3">
+                <a href="#" class="logo__footer">Electro<span class="footer__titulo">Shop</span></a>
+                <p class="parrafo__footer">
+                    Tecnología de vanguardia para <br> equipar tu casa con garantía <br> oficial y envíos seguros.
                 </p>
             </div>
 
-            <!-- Columna Categorías -->
-            <div class="columna-pie">
-                <h4>Categorías</h4>
-                <ul>
-                    <li><a href="#">Refrigeradoras</a></li>
-                    <li><a href="#">Lavadoras</a></li>
-                    <li><a href="#">Cocinas</a></li>
-                    <li><a href="#">Ofertas</a></li>
-                </ul>
+            <!-- Columna 2: Categorías -->
+            <div class="col-10 col-sm-3 col-md-3 col-lg-3">
+                <span class="titulo__footer">Categorías</span> <br>
+                <span class="parrafo__footer">
+                    <a href="#">Refrigeradoras</a> <br>
+                    <a href="#">Lavadoras</a> <br>
+                    <a href="#">Cocinas</a> <br>
+                    <a href="#">Ofertas</a>
+                </span>
             </div>
 
-            <!-- Columna Atención -->
-            <div class="columna-pie">
-                <h4>Atención al Cliente</h4>
-                <ul>
-                    <li><a href="#">Seguimiento</a></li>
-                    <li><a href="#">Garantías</a></li>
-                    <li><a href="#">Envíos</a></li>
-                    <li><a href="#">Libro de Reclamaciones</a></li>
-                </ul>
+            <!-- Columna 3: Atención al Cliente -->
+            <div class="col-10 col-sm-3 col-md-3 col-lg-3">
+                <span class="titulo__footer">Atención al Cliente</span> <br>
+                <span class="parrafo__footer">
+                    <a href="#">Seguimiento</a> <br>
+                    <a href="#">Garantías</a> <br>
+                    <a href="#">Envíos</a> <br>
+                    <a href="#">Libro de Reclamaciones</a>
+                </span>
             </div>
 
-            <!-- Columna Boletín / Ofertas -->
-            <div class="columna-pie columna-boletin">
-                <h4>Recibe Ofertas</h4>
-                <form class="formulario-boletin">
-                    <input type="email" placeholder="Email" required>
-                    <button type="submit">Unirme</button>
+            <!-- Columna 4: Recibe Ofertas -->
+            <div class="col-10 col-sm-3 col-md-3 col-lg-3">
+                <span class="titulo__footer">Recibe Ofertas</span> <br>
+                <form class="form__footer">
+                    <input type="email" placeholder="Email" class="input__footer" required>
+                    <button type="submit" class="boton__footer">Unirme</button>
                 </form>
             </div>
-        </div>
+        </section>
 
-        <hr class="divisor-pie">
+        <!-- Línea divisoria y parte inferior -->
+        <hr class="linea__footer">
 
-        <div class="pie-inferior">
-            <p>© 2026 ElectroShop</p>
-            <div class="metodos-pago">
-                <!-- Puedes reemplazar estos spans por tus <img> de Visa, Mastercard, Yape y Plin -->
-                <img src="" alt="Visa" class="imagen-pago">
-                <img src="" alt="Mastercard" class="imagen-pago">
-                <img src="" alt="Yape" class="imagen-pago">
-                <img src="" alt="Plin" class="imagen-pago">
+        <section class="row footer__bottom">
+            <div class="col-10 col-sm-6 col-md-6 col-lg-6">
+                <span class="parrafo__footer">© 2026 ElectroHogar</span>
             </div>
-        </div>
-    </footer>
+            <div class="col-10 col-sm-6 col-md-6 col-lg-6 pagos__footer">
+                <div class="pago__icono"><img src="img/visa.png" alt=""></div>
+                <div class="pago__icono"><img src="img/mastercard.png" alt=""></div>
+                <div class="pago__icono"><img src="img/yape.png" alt=""></div>
+                <div class="pago__icono"><img src="img/plin.webp" alt=""></div>
+            </div>
+        </section>
+    </section>
+</footer>
 
-    
+    <script src="js/WE_MC_02_headroom.min.js"></script>
+    <script src="js/WE_MC_04_menu-flex.js"></script>
 </body>
 </html>

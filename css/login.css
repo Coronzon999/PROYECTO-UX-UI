@@ -24,62 +24,102 @@ body {
     color: var(--colorParrafos);
 }
 
-/* BARRA DE NAVEGACIÓN */
-.barra-navegacion {
-    background-color: var(--colorFondoGris);
+.menu {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__img-logo {
+  height: 85px;
+}
+
+.menu__btn-menu {
+  display: none;
+}
+
+.menu__enlaces a {
+  font-family: 'Poppins';
+  padding: 2em;
+  text-align: center;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: var(--colorTitulo);
+  font-weight: 500;
+  transition: color 1s ease;
+}
+
+.menu__enlaces_caja a {
+  font-family: 'Poppins';
+  padding: 1.2em;
+  background-color: #CBD5E1;
+  text-align: center;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: var(--colorTitulo);
+  font-weight: 500;
+  transition: color 1s ease;
+  border-radius: 1em;
+}
+
+.menu__enlaces a:hover {
+  color: #82C8E5;
+}
+
+.menu__enlaces_caja a:hover {
+  color: #82C8E5;
+}
+
+@media screen and (max-width: 1023px) {
+  .menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu__logo {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 48px;
-}
+    width: 100%;
+    padding: 0.8em 1.5em;
+    margin-left: .10em;
+  }
 
-.caja-logo {
-    background-color: #ffffff;
-    width: 155px;
-    height: 70px;
+  .menu__img-logo {
+    height: 60px;
+    margin-left: -1em;
+  }
+
+  .menu__btn-menu {
+    display: block;
+    color: var(--colorTitulo);
+    font-size: 1.5em;
+  }
+
+  .menu__enlaces {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    overflow: hidden;
-}
+    flex-direction: column;
+  }
 
-.imagen-logo {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
+  .menu__enlaces a {
+    padding: 0.8em;
+    border-bottom: 1px solid var(--colorSeparacion);
+  }
 
-.enlaces-navegacion {
-    display: flex;
-    gap: 40px;
-}
+  .menu__enlaces_caja {
+    padding: 1em;
+    text-align: center;
+  }
 
-.enlaces-navegacion a {
-    text-decoration: none;
-    color: var(--colorSecundario);
-    font-size: 15px;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.enlaces-navegacion a:hover {
-    color: var(--colorPrimario);
-}
-
-.boton-login {
-    background-color: var(--colorTerciario);
-    color: var(--colorSecundario);
-    text-decoration: none;
-    padding: 12px 30px;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 15px;
-    transition: opacity 0.3s;
-}
-
-.boton-login:hover {
-    opacity: 0.9;
+  .menu__enlaces_caja a {
+    display: block;
+    padding: 0.8em;
+  }
 }
 
 /* SECCIÓN PRINCIPAL DE LOGIN (MÁS GRANDE Y CON MENOS ESPACIO VACÍO) */

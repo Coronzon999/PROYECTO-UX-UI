@@ -18,26 +18,35 @@
     <script src="https://kit.fontawesome.com/812c8ee19a.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/login.css">
+
+    <script src="js/WE_MC_03_jquery.js"></script>
 </head>
 <body>
 
-    <!-- BARRA DE NAVEGACIÓN -->
-    <header class="barra-navegacion">
-        <div class="caja-logo">
-            <!-- Coloca aquí la ruta de tu logo: ej. img/logo.png -->
-            <img src="" alt="Logo ElectroShop" class="imagen-logo">
-        </div>
-
-        <nav class="enlaces-navegacion">
-            <a href="inicio.html">INICIO</a>
-            <a href="#">PRODUCTO</a>
-            <a href="#">OFERTAS</a>
+    <!-- MENÚ DE NAVEGACIÓN -->
+        <header id="header">
+        <nav class="menu">
+            <div class="menu__logo">
+            <a href="index.html">
+                <img src="img/logo.jpg" alt="" class="img-fluid menu__img-logo" />
+            </a>
+            <a href="#" class="menu__btn-menu" id="btn-menu">
+                <i class="fa-solid fa-bars menu__icono-menu"></i>
+            </a>
+            </div>
+            <div class="menu__enlaces" id="enlaces">
+            <a href="index.html">INICIO</a>
+            <a href="producto.html">PRODUCTO</a>
+            <a href="ofertas.html">OFERTAS</a>
             <a href="nosotros.html">NOSOTROS</a>
-            <a href="#">CONTACTO</a>
+            <a href="contactos.html">CONTACTO</a>
+            </div>
+            <div class="menu__enlaces_caja" id="enlaces">
+                <a href="login.html">LOGIN</a>
+            </div>
         </nav>
-
-        <a href="login.html" class="boton-login">LOGIN</a>
-    </header>
+        </header>
+    <!-- FIN DE MENÚ -->
 
     <!-- CONTENEDOR PRINCIPAL DE LOGIN -->
     <main class="seccion-login">
@@ -114,6 +123,9 @@
             iconoOjo.classList.toggle('fa-eye-slash', esPassword);
         });
     </script>
+
+    <script src="js/WE_MC_02_headroom.min.js"></script>
+    <script src="js/WE_MC_04_menu-flex.js"></script>
 
 </body>
 </html>
