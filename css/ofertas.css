@@ -272,3 +272,159 @@
         height: 220px;
     }
 }
+
+/* INICIO DE FOOTER */
+footer {
+  background-color: var(--colorFooter);
+  color: #fff;
+  padding: 3em 0 1em;
+  border: .1px solid var(--colorSeparacion);
+  font-family: 'Poppins', sans-serif;
+}
+
+.img__footer {
+  width: 100%;
+}
+
+.logo__footer {
+  display: inline-block;
+  font-size: 1.7em;
+  font-weight: 700;
+  color: var(--colorTitulo);
+  text-decoration: none;
+  margin-bottom: 0.5em;
+}
+
+.logo__footer span {
+  color: var(--colorPrimario);
+}
+
+.titulo__footer {
+  display: inline-block;
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+  color: #000;
+}
+
+.cuerpo__footer {
+  display: flex;
+  gap: 9px;
+  line-height: 2em;
+}
+
+.parrafo__footer {
+  color: var(--colorParrafo);
+  line-height: 1.9em;
+}
+
+.parrafo__footer a {
+  color: var(--colorParrafo);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.parrafo__footer a:hover {
+  color: var(--colorPrimario);
+}
+
+/* Formulario */
+.form__footer {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 4px;
+  margin-top: 0.5em;
+}
+
+.input__footer {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0.6em 1em;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9em;
+  color: #1B2A38;
+  width: 100%;
+}
+
+.boton__footer {
+  background-color: var(--colorSecundario);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.6em 1.4em;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.boton__footer:hover {
+  opacity: 0.85;
+}
+
+/* Línea divisoria y parte inferior */
+.linea__footer {
+  border: none;
+  border-top: 1px solid var(--colorDivisor);
+  margin: 2.5em 0 1.5em;
+}
+
+.footer__bottom {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pagos__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6em;
+}
+
+.pago__icono {
+  background-color: #fff;
+  border-radius: 6px;
+  width: 70px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.pago__icono img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 860px) {
+  footer {
+    padding: 2em 1em 1em;
+  }
+
+  .cuerpo__footer {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .form__footer {
+    width: 100%;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1em;
+  }
+
+  .pagos__footer {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1em;
+  }
+}
+/* FIN DE FOOTER */
