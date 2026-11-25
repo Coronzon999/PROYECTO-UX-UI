@@ -90,6 +90,21 @@
         display: flex;
         flex-direction: column;
     }
+
+    .menu__enlaces a {
+    padding: 0.8em;
+    border-bottom: 1px solid var(--colorSeparacion);
+  }
+
+  .menu__enlaces_caja {
+    padding: 1em;
+    text-align: center;
+  }
+
+  .menu__enlaces_caja a {
+    display: block;
+    padding: 0.8em;
+  }
 }
 
 
