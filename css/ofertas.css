@@ -143,6 +143,17 @@
     gap: 3em;
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+.cards__grid2 {
+    display: grid; 
+    gap: 3em;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cards__grid3 {
+    display: grid; 
+    gap: 3em;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 
 .card{
     background-color: #FFFF;
@@ -177,28 +188,55 @@
     height: 100%;
     object-fit: cover;
 }
+.card__img2 img{
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card__img3 img{
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
 
 @media (max-width: 600px) {
     .cards__grid {
         grid-template-columns: 1fr;
         gap: 1.5em;
     }
-}
-
-.cards__grid2 {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2.5em;
+    .Subtitulo {
+        font-size: 2em;
+    }
+    .Subtitulo__2 {
+        font-size: 2.5em;
+    }
+    .Titulo {
+        font-size: 3.2em;
+    }
 }
 
 .card2 {
-    padding: 0.6em;
-    background-color: #dedede;
-    border-radius: 1.5em;
+    background-color: transparent;
+    border-radius: 1.1em;
+    overflow: hidden;
+}
+
+.card3 {
+    background-color: transparent;
+    border-radius: 1.1em;
     overflow: hidden;
 }
 
 .card__img2 {
+    aspect-ratio: 16 / 9;
+    border-radius: 1.1em;
+    overflow: hidden;
+}
+
+.card__img3 {
     aspect-ratio: 16 / 9;
     border-radius: 1.1em;
     overflow: hidden;
@@ -209,6 +247,7 @@
     display: block;
     width: 100%;
     height: 100%;
+    border-radius: 2em;
 }
 
 .card__img2 img {
@@ -217,6 +256,25 @@
 
 @media (max-width: 600px) {
     .cards__grid2 {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+    }
+}
+
+.card__img3 a,
+.card__img3 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 2em;
+}
+
+.card__img3 img {
+    object-fit: cover;
+}
+
+@media (max-width: 600px) {
+    .cards__grid3 {
         grid-template-columns: 1fr;
         gap: 1.5em;
     }
@@ -248,10 +306,10 @@
     z-index: 20; 
     position: relative;
 }
-.row {
+/* .row {
     display: flex;
     flex-wrap: wrap;
-}
+} */
 .centrado{
     display: block;
     margin: auto;
@@ -259,17 +317,24 @@
 
 
 @media screen and (max-width: 860px) {
-    .mainbanner {
-        padding: 8em 6em;
+    .mainbanner img {
+        height: 200px;
+        width: 174%;
     }
 
 }
 @media screen and (max-width: 360px) {
-    .mainbanner {
-        padding: 4em 2em;
+    .mainbanner img {
+        height: 200px;
+        width: 174%;
     }
-
 }
+
+/* @media screen and (max-width: 360px) {
+    .row img {
+        border-radius: 2em;
+    }
+} */
 
 
 #carouselExampleCaptions {
@@ -279,7 +344,7 @@
 
 #carouselExampleCaptions .carousel-item img {
     width: 100%;
-    height: 500px;
+    height: 750px;
     object-fit: cover;
     object-position: center;
 }
@@ -287,6 +352,7 @@
 @media (max-width: 768px) {
     #carouselExampleCaptions .carousel-item img {
         height: 220px;
+        width: 100%;
     }
 }
 
